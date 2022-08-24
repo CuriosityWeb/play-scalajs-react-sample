@@ -1,0 +1,11 @@
+GET         /                        controllers.MainController.index
+POST        /main/getUserInfo        controllers.MainController.getUserInfo
+
+GET         /auth                    controllers.AuthController.index
+POST        /auth/register           controllers.AuthController.register
+POST        /auth/login              controllers.AuthController.login
+POST        /auth/logout             controllers.AuthController.logout
+
+GET         /assets/*file            controllers.Assets.versioned(path="/public", file: Asset)
+
+->          /webjars                 webjars.Routes

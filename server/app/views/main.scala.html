@@ -1,0 +1,24 @@
+@import org.webjars.play.WebJarsUtil
+@import views.html.helper.CSPNonce
+
+@()(implicit requestHeader: RequestHeader, webJarsUtil: WebJarsUtil)
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Sample App</title>
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/common.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+
+            @webJarsUtil.locate("umd/react.production.min.js").script(CSPNonce.attrMap)
+            @webJarsUtil.locate("umd/react-dom.production.min.js").script(CSPNonce.attrMap)
+    </head>
+
+    <body>
+        <div id="main"></div>
+
+        @scalajs.html.scripts("main", routes.Assets.versioned(_).toString, name => getClass.getResource(s"/public/$name") != null)
+    </body>
+</html>

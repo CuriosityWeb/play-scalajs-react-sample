@@ -1,2 +1,9 @@
+.bsp
+.idea
+target
+null
+shared/.js
+shared/.jvm
+
 *.class
 *.log

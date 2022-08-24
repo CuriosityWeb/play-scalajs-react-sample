@@ -1,0 +1,18 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#heading {
+    font-family: "Lucida Handwriting", cursive;
+    font-size: x-large;
+    background-color: #ff6666;
+    padding: 0.5em;
+    color: white;
+    text-align: center;
+}
