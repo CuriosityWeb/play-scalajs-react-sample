@@ -15,10 +15,6 @@ lazy val h2Version = "2.1.214"
 lazy val scalajsScriptsVersion = "1.2.0"
 lazy val playSlickEvolutionVersion = "5.0.2"
 
-lazy val root = (project in file("."))
-  .settings(name := "play-scalajs-react-sample")
-  .aggregate(sharedJS, sharedJVM, common, auth, main, server)
-
 lazy val shared = crossProject(JSPlatform, JVMPlatform)
   .crossType(CrossType.Pure)
   .in(file("./shared"))
