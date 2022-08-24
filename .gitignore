@@ -4,6 +4,7 @@ target
 null
 shared/.js
 shared/.jvm
+db
 
 *.class
 *.log
