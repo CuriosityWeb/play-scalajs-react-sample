@@ -9,6 +9,7 @@ lazy val react4sVersion = "0.10.0-SNAPSHOT"
 lazy val macroTaskExecutorVersion = "1.1.0"
 
 // JVM Dependencies Version
+lazy val guiceVersion = "5.1.0"
 lazy val webjarsPlayVersion = "2.8.13"
 lazy val reactVersion = "18.2.0"
 lazy val h2Version = "2.1.214"
@@ -59,6 +60,8 @@ lazy val server = (project in file("server"))
     Assets / pipelineStages := Seq(scalaJSPipeline),
     libraryDependencies ++= Seq(
       guice,
+      "com.google.inject" % "guice" % guiceVersion,
+      "com.google.inject.extensions" % "guice-assistedinject" % guiceVersion,
       "org.webjars" %% "webjars-play" % webjarsPlayVersion,
       "org.webjars.npm" % "react" % reactVersion,
       "org.webjars.npm" % "react-dom" % reactVersion,
